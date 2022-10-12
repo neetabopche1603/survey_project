@@ -21,7 +21,7 @@ class SurveyController extends Controller
             'father_name'=>'required',
             'surname'=>'required',
             'address' => 'required',
-            'mobile' => 'required|unique:users,mobile|max:10',
+            'mobile' => 'required|unique:surveys,mobile|max:10',
             'ward' => 'required',
             'vidhan' => 'required',
             'name' => 'required',
