@@ -143,47 +143,63 @@
                     <form method="POST" action="{{ route('addSurvey') }}" class="form-card">
                         @csrf
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-4 flex-column d-flex"> <label class="form-control-label px-3">Name of Head of Family :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="family_head_name" name="family_head_name" value="{{ old('family_head_name') }}" placeholder="Enter Your Name" onblur="validate(1)" required> </div>
-                            <span class="text-danger">
-                                @error('family_head_name')
-                                {{$message}}
-                                @enderror
-                            </span>
-                        </div>
-                        <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-12 flex-column d-flex"> <label class="form-control-label px-3">Address :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="address" name="address" placeholder="Enter Address" onblur="validate(3)" value="{{ old('address') }}" required> </div>
-                            <span class="text-danger">
-                                @error('address')
-                                {{$message}}
-                                @enderror
-                            </span>
-                        </div>
-                        <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-12 flex-column d-flex"> <label class="form-control-label px-3">Phone number :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="mobile" name="mobile" placeholder="Enter Mobile Number" onblur="validate(4)" value="{{ old('mobile') }}" required> </div>
-                            <span class="text-danger">
-                                @error('mobile')
-                                {{$message}}
-                                @enderror
-                            </span>
-                        </div>
-                        <div class="row justify-content-between text-left">
-                            <div class="form-group col-6 flex-column d-flex"> <label class="form-control-label px-3">Ward No :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="ward" name="ward" placeholder="Enter Ward Number" onblur="validate(6)" value="{{ old('ward') }}" required>
+                            <div class="form-group col-3 flex-column d-flex"> <label class="form-control-label px-3">Family Head Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="family_head_name" name="family_head_name" placeholder="Enter Family Head Name" onblur="validate(6)" value="{{ old('family_head') }}" required>
                                 <span class="text-danger">
-                                    @error('ward')
+                                    @error('family_head_name')
                                     {{$message}}
                                     @enderror
                                 </span>
                             </div>
-                            <div class="form-group col-6 flex-column d-flex"> <label class="form-control-label px-3">Name of Vidhan Sabha :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="vidhan" name="vidhan" placeholder="Enter Vidhan Sabha Name" onblur="validate(6)" value="{{ old('vidhan') }}" required>
+                            <div class="form-group col-4 flex-column d-flex"> <label class="form-control-label px-3">Father Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="father_name" name="father_name" placeholder="Enter Father Name" onblur="validate(6)" value="{{ old('father_name') }}" required>
                                 <span class="text-danger">
-                                    @error('vidhan')
+                                    @error('father_name')
                                     {{$message}}
                                     @enderror
                                 </span>
                             </div>
+                                <div class="form-group col-3 flex-column d-flex"> <label class="form-control-label px-3">Surname :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="surname" name="surname" placeholder="Enter Surname" onblur="validate(6)" value="{{ old('surname') }}" required>
+                                    <span class="text-danger">
+                                        @error('surname')
+                                        {{$message}}
+                                        @enderror
+                                    </span>
+                                </div>
+                                <div class="row justify-content-between text-left">
+                                    <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">
+                                        Address :<span class="text-danger"> *</span></label> <textarea class="inp" id="address" name="address" placeholder="Enter Address" rows="8" onblur="validate(3)" required>{{ old('address') }}</textarea>
+                                        <span class="text-danger">
+                                            @error('address')
+                                            {{$message}}
+                                            @enderror
+                                        </span>
+                                    </div>
+                                    <div class="row col-sm-6">
+                                        <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Ward No :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="ward" name="ward" placeholder="Enter Ward Number" onblur="validate(6)" value="{{ old('ward') }}" required>
+                                            <span class="text-danger">
+                                                @error('ward')
+                                                {{$message}}
+                                                @enderror
+                                            </span>
+                                        </div>
+            
+                                        <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3"> Vidhan Sabha :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="vidhan" name="vidhan" placeholder="Enter Vidhan Sabha Name" onblur="validate(6)" value="{{ old('vidhan') }}" required>
+                                            <span class="text-danger">
+                                                @error('vidhan')
+                                                {{$message}}
+                                                @enderror
+                                            </span>
+                                        </div>
 
-                        </div>
-
+                                        <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Phone number :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="mobile" name="mobile" placeholder="Enter Mobile Number" onblur="validate(4)" value="{{ old('mobile') }}" required> </div>
+                                            <span class="text-danger">
+                                                @error('mobile')
+                                                {{$message}}
+                                                @enderror
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                       
                         <div id="member">
                             <div class="row justify-content-between text-left addMemeber memberCount" id="member">
                                 <div class="form-group col-3 flex-column d-flex"> <label class="form-control-label px-3">Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="name" name="name[]" placeholder="Enter Name" onblur="validate(6)" value="" required>
@@ -270,7 +286,7 @@
                                 </div>
 
                                 <div class="col-xl-1 col-lg-1 col-md-1 col-1">
-                                    <div class="form-group"> <button type="button" id="addMemeberBtn" onclick='addMemeber(this)' class="btn-block btn-success mt-4">Add</button> </div>
+                                    <div class="form-group"> <button type="button" id="addMemeberBtn" onclick='addMemeber(this)' class="btn-block btn-success mt-4"><i class="fa fa-plus"></i></button> </div>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +303,7 @@
                         </div>
 
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-3 flex-column d-flex"> <label class="form-control-label px-3">Date :</label> <input type="text" id="date" class="inp" name="date" placeholder="" value="<?php echo date('d-m-Y'); ?>" onblur="validate(3)" value="{{ old('date') }}" readOnly>
+                            <div class="form-group col-sm-3 flex-column d-flex"> <label class="form-control-label px-3">Date :</label> <input type="text" id="date" class="inp" name="date" placeholder="" value="<?php echo date('d-m-Y'); ?>" onblur="validate(3)" value="{{ old('date') }}" disabled>
                                 <span class="text-danger">
                                     @error('date')
                                     {{$message}}
@@ -458,7 +474,7 @@
                                 </div>
 
                             <div class="col-xl-1 col-lg-1 col-md-1 col-1">
-                                <div class="form-group btn-group"> <button type="button" onclick='addMemeber()' class="btn-block btn-success mt-4">Add</button> <button type="button" class="btn-block btn-danger mt-4 remove" data-class="addMemeber${j++}">X</button> </div></div>`;
+                                <div class="form-group btn-group"> <button type="button" onclick='addMemeber()' class="btn-block btn-success mt-4"><i class="fa fa-plus"></i></button> <button type="button" class="btn-block btn-danger mt-4 remove" data-class="addMemeber${j++}">X</button> </div></div>`;
 
             $('#member').append(html);
         }

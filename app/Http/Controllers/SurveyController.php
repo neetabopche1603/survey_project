@@ -18,6 +18,8 @@ class SurveyController extends Controller
         // dd($request->all());
         $validatedData = $request->validate([
             'family_head_name' => 'required',
+            'father_name'=>'required',
+            'surname'=>'required',
             'address' => 'required',
             'mobile' => 'required|unique:users,mobile|max:10',
             'ward' => 'required',
@@ -35,6 +37,8 @@ class SurveyController extends Controller
 
         $survey = new Survey();
         $survey->family_head_name = $request->family_head_name;
+        $survey->father_name =$request->father_name;
+        $survey->surname =$request->surname;        
         $survey->address = $request->address;
         $survey->mobile = $request->mobile;
         $survey->ward_no = $request->ward;
