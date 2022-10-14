@@ -12,11 +12,11 @@
             
         <div class="col-xl-11 col-lg-12 col-md-12 col-11">
             <div class="mr-2">
-                <h5 class="mr-4 fw-bold">Name : {{$member[0]->survey->family_head_name}}</h5>
-                <h5 class="fw-bold">Mobile : {{$member[0]->survey->mobile}}</h5>
-                <h5 class="fw-bold">Ward No : {{$member[0]->survey->ward_no}}</h5>
-                <h5 class="fw-bold">Vidhan Sabha Name : {{$member[0]->survey->vidhan_name}}</h5>
-                <h5 class="fw-bold">Address : {{$member[0]->survey->address}}</h5>
+                <h5 class="mr-4 fw-bold">Name : {{$head->family_head_name}}</h5>
+                <h5 class="fw-bold">Mobile : {{$head->mobile}}</h5>
+                <h5 class="fw-bold">Ward No : {{$head->ward_no}}</h5>
+                <h5 class="fw-bold">Vidhan Sabha Name : {{$head->vidhan_name}}</h5>
+                <h5 class="fw-bold">Address : {{$head->address}}</h5>
             </div>
 
             <table id="survey" class="table table-striped table-bordered" style="width:100%">

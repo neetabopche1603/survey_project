@@ -31,8 +31,8 @@ class HomeController extends Controller
 
     public function seeMember($id)
     {
-        // $member = Member::where('survey_id',$id)->get();
-        $member = Member::with('survey')->get();
-        return view('member',compact('member'));
+        $member = Member::where('survey_id',$id)->get();
+        $head = Survey::find($id);
+        return view('member',compact('member','head'));
     }
 }
