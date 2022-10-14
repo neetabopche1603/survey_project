@@ -131,33 +131,33 @@
                 <p class="text-dark">"Sindhu Bhawan" Kranti Kraplani Nagar, Indore</p>
 
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-4"></div>
-                    <div class="col-xl-1 col-lg-1 col-md-1 col-1"></div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-3 ms-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-1"></div>
+                    <div class="col-xl-1 col-lg-2 col-md-3 col-sm-1"></div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-7 ">
                         <h5 class="bg-dark text-white p-1 rounded-pill">SINDHU SAMAJ SURVEY</h5>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-4"></div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 "></div>
                 </div>
                 <h6> (Area Indore Muncipal Corporation) Sepetember, Oct. 2022 </h6>
                 <div class="card">
                     <form method="POST" action="{{ route('addSurvey') }}" class="form-card">
                         @csrf
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-3 flex-column d-flex"> <label class="form-control-label px-3">Family Head Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="family_head_name" name="family_head_name" placeholder="Enter Family Head Name" onblur="validate(6)" value="{{ old('family_head') }}" required>
+                            <div class="form-group col-md-3 col-sm-10"> <label class="form-control-label px-3">Family Head Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="family_head_name" name="family_head_name" placeholder="Enter Family Head Name" onblur="validate(6)" value="{{ old('family_head') }}" required>
                                 <span class="text-danger">
                                     @error('family_head_name')
                                     {{$message}}
                                     @enderror
                                 </span>
                             </div>
-                            <div class="form-group col-4 flex-column d-flex"> <label class="form-control-label px-3">Father Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="father_name" name="father_name" placeholder="Enter Father Name" onblur="validate(6)" value="{{ old('father_name') }}" required>
+                            <div class="form-group col-md-4 col-sm-10"> <label class="form-control-label px-3">Father Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="father_name" name="father_name" placeholder="Enter Father Name" onblur="validate(6)" value="{{ old('father_name') }}" required>
                                 <span class="text-danger">
                                     @error('father_name')
                                     {{$message}}
                                     @enderror
                                 </span>
                             </div>
-                                <div class="form-group col-3 flex-column d-flex"> <label class="form-control-label px-3">Surname :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="surname" name="surname" placeholder="Enter Surname" onblur="validate(6)" value="{{ old('surname') }}" required>
+                                <div class="form-group col-md-3 col-sm-10"> <label class="form-control-label px-3">Surname :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="surname" name="surname" placeholder="Enter Surname" onblur="validate(6)" value="{{ old('surname') }}" required>
                                     <span class="text-danger">
                                         @error('surname')
                                         {{$message}}
@@ -202,7 +202,7 @@
                                        
                         <div id="member">
                             <div class="row justify-content-between text-left addMemeber memberCount" id="member">
-                                <div class="form-group col-3 flex-column d-flex"> <label class="form-control-label px-3">Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="name" name="name[]" placeholder="Enter Name" onblur="validate(6)" value="" required>
+                                <div class="form-group col-md-3 col-sm-10"> <label class="form-control-label px-3">Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="name" name="name[]" placeholder="Enter Name" onblur="validate(6)" value="" required>
                                     <span class="text-danger">
                                         @error('name')
                                         {{$message}}
@@ -210,7 +210,7 @@
                                     </span>
                                 </div>
 
-                                <div class="form-group col-2 flex-column d-flex"> <label class="form-control-label px-3">Relation :</label>
+                                <div class="form-group col-md-2 col-sm-10"> <label class="form-control-label px-3">Relation :</label>
                                     <select class="form-select select" id="relation" name="relation[]" required="true">
                                         <option>Relation</option>
                                         <option value="Father">Father</option>
@@ -230,15 +230,8 @@
                                         @enderror
                                     </span>
                                 </div>
-                                <!-- <div class="form-group col-2 flex-column d-flex"> <label class="form-control-label px-3">Relation :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="relation" name="relation[]" placeholder="Enter Relation" onblur="validate(6)">
-                                    <span class="text-danger">
-                                        @error('relation')
-                                        {{$message}}
-                                        @enderror
-                                    </span>
-                                </div> -->
 
-                                <div class="form-group col-2 flex-column d-flex"> <label class="form-control-label px-3">Age/DOB :<span class="text-danger"> *</span></label> <input type="date" class="inp" id="age" name="age[]" placeholder="Enter Age" onblur="validate(6)" value="" required>
+                                <div class="form-group col-md-2 col-sm-10"> <label class="form-control-label px-3">Age/DOB :<span class="text-danger"> *</span></label> <input type="date" class="inp" id="age" name="age[]" placeholder="Enter Age" onblur="validate(6)" value="" required>
                                     <span class="text-danger">
                                         @error('age')
                                         {{$message}}
@@ -246,7 +239,7 @@
                                     </span>
                                 </div>
 
-                                <div class="form-group col-2 flex-column d-flex"> <label class="form-control-label px-3">Citizenship :<span class="text-danger"> *</span></label>
+                                <div class="form-group col-md-2 col-sm-10"> <label class="form-control-label px-3">Citizenship :<span class="text-danger"> *</span></label>
                                     <select class="form-select select" id="citizenship" name="citizenship[]" required="true">
                                         <option>Citizenship</option>
                                         @foreach ($country as $data)
@@ -261,16 +254,7 @@
 
                                 </div>
 
-                                <!-- <div class="form-group col-2 flex-column d-flex"> <label class="form-control-label px-3">Voter- y/n :</label>
-                                <input type="text" class="inp" id="voter" name="voter[]" placeholder="Enter Yes/No" onblur="validate(6)">
-                                    <span class="text-danger">
-                                        @error('voter')
-                                        {{$message}}
-                                        @enderror
-                                    </span>
-                                </div> -->
-
-                                <div class="form-group col-2 flex-column d-flex"> <label class="form-control-label px-3">Voter- y/n :</label>
+                                <div class="form-group col-md-2 col-sm-10"> <label class="form-control-label px-3">Voter- y/n :</label>
                                     <select class="form-select select" id="voter" name="voter[]" required="true">
                                         <option>Voter</option>
                                         <option value="yes">Yes</option>
@@ -283,8 +267,8 @@
                                     </span>
                                 </div>
 
-                                <div class="col-xl-1 col-lg-1 col-md-1 col-1">
-                                    <div class="form-group"> <button type="button" id="addMemeberBtn" onclick='addMemeber(this)' class="btn-block btn-success mt-4"><i class="fa fa-plus"></i></button> </div>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-2 d-flex">
+                                    <div class="form-group"> <button type="button" id="addMemeberBtn" onclick='addMemeber(this)' class="btn-block btn-success text-lg-center "><i class="fa fa-plus"></i></button> </div>
                                 </div>
                             </div>
                         </div>
@@ -411,9 +395,9 @@
         let j = 1;
 
         function addMemeber() {
-            let html = `<div class="row justify-content-between text-left addMemeber${i++} memberCount"> <div class="form-group col-3 flex-column d-flex"> <label class="form-control-label px-3">Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="name" name="name[]" placeholder="Enter Name" onblur="validate(6)" value=""> </div>
+            let html = `<div class="row justify-content-between text-left addMemeber${i++} memberCount"> <div class="form-group col-md-3 col-sm-10"> <label class="form-control-label px-3">Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="name" name="name[]" placeholder="Enter Name" onblur="validate(6)" value=""> </div>
 
-                        <div class="form-group col-2 flex-column d-flex"> <label class="form-control-label px-3">Relation :</label>
+                        <div class="form-group col-md-2 col-sm-10"> <label class="form-control-label px-3">Relation :</label>
                                                 <select class="form-select select" id="relation" name="relation[]" required>
                                                     <option>Relation</option>
                                                     <option value="Father">Father</option>
@@ -434,7 +418,7 @@
                                                 </span>
                                             </div>
 
-                                            <div class="form-group col-2 flex-column d-flex"> <label class="form-control-label px-3">Age/DOB :<span class="text-danger"> *</span></label> <input type="date" class="inp" id="age" name="age[]" placeholder="Enter Age" onblur="validate(6)" value="" required>
+                                            <div class="form-group col-md-2 col-sm-10"> <label class="form-control-label px-3">Age/DOB :<span class="text-danger"> *</span></label> <input type="date" class="inp" id="age" name="age[]" placeholder="Enter Age" onblur="validate(6)" value="" required>
                                     <span class="text-danger">
                                         @error('age')
                                         {{$message}}
@@ -442,7 +426,7 @@
                                     </span>
                                 </div>
 
-                            <div class="form-group col-2 flex-column d-flex"> <label class="form-control-label px-3">Citizenship :<span class="text-danger"> *</span></label>
+                            <div class="form-group col-md-2 col-sm-10"> <label class="form-control-label px-3">Citizenship :<span class="text-danger"> *</span></label>
                                     <select class="form-select select" id="citizenship" name="citizenship[]" required>
                                       <option>Citizenship</option>
                                       @foreach ($country as $data)
@@ -456,7 +440,7 @@
                                     </span>
                                 </div>
 
-                            <div class="form-group col-2 flex-column d-flex"> <label class="form-control-label px-3">Voter- y/n :</label>
+                            <div class="form-group col-md-2 col-sm-10"> <label class="form-control-label px-3">Voter- y/n :</label>
                                     <select class="form-select select" id="voter" name="voter[]" required>
                                         <option>Voter</option>
                                         <option value="yes">Yes</option>
