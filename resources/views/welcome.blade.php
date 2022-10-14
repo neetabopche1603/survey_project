@@ -218,8 +218,6 @@
                                         <option value="Spouse">Spouse</option>
                                         <option value="Brother">Brother</option>
                                         <option value="Sister">Sister</option>
-                                        <option value="Husband">Husband</option>
-                                        <option value="Wife">Wife</option>
                                         <option value="Son">Son</option>
                                         <option value="Daughter">Daughter</option>
                                         <option value="Grand Father">Grand Father</option>
@@ -423,8 +421,6 @@
                                                     <option value="Spouse">Spouse</option>
                                                     <option value="Brother">Brother</option>
                                                     <option value="Sister">Sister</option>
-                                                    <option value="Husband">Husband</option>
-                                                    <option value="Wife">Wife</option>
                                                     <option value="Son">Son</option>
                                                     <option value="Daughter">Daughter</option>
                                                     <option value="Grand Father">Grand Father</option>
