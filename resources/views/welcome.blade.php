@@ -474,7 +474,7 @@
                                 </div>
 
                             <div class="col-xl-1 col-lg-1 col-md-1 col-1">
-                                <div class="form-group btn-group"> <button type="button" onclick='addMemeber()' class="btn-block btn-success mt-4"><i class="fa fa-plus"></i></button> <button type="button" class="btn-block btn-danger mt-4 remove" data-class="addMemeber${j++}">X</button> </div></div>`;
+                                <div class="form-group btn-group"><button type="button" class="btn-block btn-danger mt-4 remove" data-class="addMemeber${j++}">X</button> </div></div>`;
 
             $('#member').append(html);
         }
